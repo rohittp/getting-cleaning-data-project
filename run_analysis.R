@@ -47,4 +47,7 @@ names(data)<-gsub("[[:punct:]]","",names(data))
 data.melt<-melt(data,id.vars=c("subjectId","activityLabel"))
 
 #create tidy data into wide form
-tidy.data.wide<-dcast(data.melt,subjectId+activityLabel~variable,mean)
+tidy_data_wide<-dcast(data.melt,subjectId+activityLabel~variable,mean)
+
+#Write the file to the current working directory
+write.table(tidy_data_wide,file=file.path(x,"tidy_data_wide.txt",fsep = .Platform$file.sep))

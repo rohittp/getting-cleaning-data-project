@@ -1,28 +1,37 @@
-                         DATA DICTIONARY
+#                        DATA DICTIONARY
 
-subjectId               
+subjectId       
+
     Subject Identifier for 30 volunteers within an age bracket of 19-48   
     years who performed the activity for each window sample.
+    
                         1..30   .Integer identifier of each subject
                         
-activityLabel           
+activityLabel
+
     Represents the 6 activities performed by the subjects during the     
     experiment.
+    
                         .Factor with 6 Levels: LAYING SITTING STANDING         
                         WALKING WALKING DOWNSTAIRS  WALKING UPSTAIRS                       
                        
                      
 tBodyAccmeanX
+
     Summarized mean value grouped by subjectID and activityLabel for the   
     Time Body Accelaration mean readings across X axis.
+    
                         -1..1   .Number variable 
 
 tBodyAccmeanY
+
     Summarized mean value grouped by subjectID and activityLabel for the   
     Time Body Accelaration mean readings across Y axis.
+    
                         -1..1   .Number variable      
 
 tBodyAccmeanZ
+
     Summarized mean value grouped by subjectID and activityLabel for the   
     Time Body Accelaration mean readings across Z axis.
                         -1..1   .Number variable 
